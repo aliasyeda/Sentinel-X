@@ -1,0 +1,8 @@
+{
+    "incident": "Malware detected",
+    "confidence": 0.92,
+    "root_cause": "Suspicious PowerShell execution",
+    "decision": "Isolate host from network",
+    "autonomy_level": "High",
+    "learning_update": "Added new malware pattern to memory"
+}

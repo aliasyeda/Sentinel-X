@@ -1,0 +1,282 @@
+{
+  "incidents": [],
+  "patterns": {
+    "database_connection_failure_auth-service": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "high",
+        "high"
+      ],
+      "confidences": [
+        0.79,
+        0.9
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.650511",
+      "avg_confidence": 0.845,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.958120"
+    },
+    "service_crash_load-balancer": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "critical",
+        "critical"
+      ],
+      "confidences": [
+        0.94,
+        0.8600000000000001
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.650511",
+      "avg_confidence": 0.9,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.958120"
+    },
+    "high_traffic_cache-redis": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "high",
+        "high"
+      ],
+      "confidences": [
+        0.81,
+        0.91
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.650511",
+      "avg_confidence": 0.8600000000000001,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.958120"
+    },
+    "unauthorized_access_web-server-1": {
+      "count": 4,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "critical",
+        "critical",
+        "critical",
+        "critical"
+      ],
+      "confidences": [
+        0.8,
+        0.87,
+        0.9299999999999999,
+        0.95
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653762",
+      "avg_confidence": 0.8875,
+      "decision_count": 2,
+      "last_decision": "2025-12-29T22:35:36.973793"
+    },
+    "high_traffic_web-server-1": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "high",
+        "high"
+      ],
+      "confidences": [
+        0.77,
+        0.9
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.650511",
+      "avg_confidence": 0.835,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.966453"
+    },
+    "high_traffic_load-balancer": {
+      "count": 4,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "confidences": [
+        0.86,
+        0.93,
+        0.89,
+        0.95
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653200",
+      "avg_confidence": 0.9075,
+      "decision_count": 2,
+      "last_decision": "2025-12-29T22:35:36.973793"
+    },
+    "slow_response_load-balancer": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "low",
+        "low"
+      ],
+      "confidences": [
+        0.82,
+        0.89
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653200",
+      "avg_confidence": 0.855,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.968468"
+    },
+    "high_traffic_auth-service": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "high",
+        "high"
+      ],
+      "confidences": [
+        0.9,
+        0.89
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653762",
+      "avg_confidence": 0.895,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.973793"
+    },
+    "service_crash_database-primary": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "critical",
+        "critical"
+      ],
+      "confidences": [
+        0.9,
+        0.95
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653762",
+      "avg_confidence": 0.925,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.973793"
+    },
+    "memory_leak_auth-service": {
+      "count": 2,
+      "first_occurrence": "2025-12-29T03:09:26.497767",
+      "severities": [
+        "medium",
+        "medium"
+      ],
+      "confidences": [
+        0.79,
+        0.87
+      ],
+      "common_resolution": "unknown",
+      "last_occurrence": "2025-12-29T22:35:36.653762",
+      "avg_confidence": 0.8300000000000001,
+      "decision_count": 1,
+      "last_decision": "2025-12-29T22:35:36.973793"
+    }
+  },
+  "last_updated": "2025-12-29T03:09:23.430331",
+  "decisions": [
+    {
+      "pattern_key": "database_connection_failure_auth-service",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.9,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.958120"
+    },
+    {
+      "pattern_key": "service_crash_load-balancer",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.8600000000000001,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.958120"
+    },
+    {
+      "pattern_key": "high_traffic_cache-redis",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.91,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.958120"
+    },
+    {
+      "pattern_key": "unauthorized_access_web-server-1",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.9299999999999999,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.966453"
+    },
+    {
+      "pattern_key": "high_traffic_web-server-1",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.9,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.966453"
+    },
+    {
+      "pattern_key": "high_traffic_load-balancer",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.89,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.968468"
+    },
+    {
+      "pattern_key": "slow_response_load-balancer",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.89,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.968468"
+    },
+    {
+      "pattern_key": "high_traffic_load-balancer",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.95,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.973793"
+    },
+    {
+      "pattern_key": "high_traffic_auth-service",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.89,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.973793"
+    },
+    {
+      "pattern_key": "service_crash_database-primary",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.95,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.973793"
+    },
+    {
+      "pattern_key": "unauthorized_access_web-server-1",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.95,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.973793"
+    },
+    {
+      "pattern_key": "memory_leak_auth-service",
+      "decision_type": "escalate_human",
+      "action_taken": "manual_intervention",
+      "confidence": 0.87,
+      "success": null,
+      "timestamp": "2025-12-29T22:35:36.973793"
+    }
+  ]
+}

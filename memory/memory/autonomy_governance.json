@@ -1,0 +1,16 @@
+{
+  "governance_decisions": [
+    {
+      "governance_id": "GOV-1771512452",
+      "recommended_autonomy_level": "FULL_AUTONOMY",
+      "timestamp": "2026-02-19T20:17:32.871608",
+      "ai_confidence": 0.99,
+      "service": "auth-service",
+      "policy_applied": {
+        "Zero_Trust_Policy": [
+          "Block Critical Threats"
+        ]
+      }
+    }
+  ]
+}

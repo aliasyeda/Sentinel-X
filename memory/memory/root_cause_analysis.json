@@ -1,0 +1,15 @@
+{
+  "root_causes": [
+    {
+      "likely_root_cause": "Unsanitized Input in Legacy Auth Module",
+      "evidence": {
+        "correlation_strength": 0.99
+      },
+      "impact_assessment": "Data Exfiltration Imminent",
+      "affected_services": [
+        "auth-service",
+        "user-db"
+      ]
+    }
+  ]
+}

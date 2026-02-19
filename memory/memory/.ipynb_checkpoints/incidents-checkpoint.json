@@ -1,0 +1,168 @@
+[
+  {
+    "type": "database_connection_failure",
+    "service": "auth-service",
+    "severity": "high",
+    "description": "auth-service unable to connect to database",
+    "metrics": {
+      "connection_pool": 0,
+      "queue_size": 153,
+      "error": "Connection timeout",
+      "retry_count": 5
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 1
+  },
+  {
+    "type": "service_crash",
+    "service": "load-balancer",
+    "severity": "critical",
+    "description": "load-balancer has crashed and is not responding",
+    "metrics": {
+      "status": "down",
+      "error_code": "404",
+      "uptime_before_crash": "60 hours",
+      "last_signal": "SIGTERM"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 2
+  },
+  {
+    "type": "high_traffic",
+    "service": "cache-redis",
+    "severity": "high",
+    "description": "Unusual high traffic detected on cache-redis",
+    "metrics": {
+      "connections": 443,
+      "cpu_usage": 80,
+      "response_time": 967,
+      "throughput": "79 GB/hour"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 6
+  },
+  {
+    "type": "unauthorized_access",
+    "service": "web-server-1",
+    "severity": "critical",
+    "description": "Multiple failed login attempts detected on web-server-1",
+    "metrics": {
+      "failed_attempts": 74,
+      "source_ip": "192.168.1.234",
+      "user_account": "admin",
+      "geolocation": "RU"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 7
+  },
+  {
+    "type": "high_traffic",
+    "service": "web-server-1",
+    "severity": "high",
+    "description": "Unusual high traffic detected on web-server-1",
+    "metrics": {
+      "connections": 110,
+      "cpu_usage": 84,
+      "response_time": 1564,
+      "throughput": "24 GB/hour"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 8
+  },
+  {
+    "type": "high_traffic",
+    "service": "load-balancer",
+    "severity": "medium",
+    "description": "Unusual high traffic detected on load-balancer",
+    "metrics": {
+      "connections": 335,
+      "cpu_usage": 87,
+      "response_time": 1915,
+      "throughput": "17 GB/hour"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 11
+  },
+  {
+    "type": "slow_response",
+    "service": "load-balancer",
+    "severity": "low",
+    "description": "load-balancer responding slowly to requests",
+    "metrics": {
+      "avg_response_time": 1092,
+      "timeout_percentage": 21,
+      "p95_latency": 3690
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 17
+  },
+  {
+    "type": "high_traffic",
+    "service": "load-balancer",
+    "severity": "medium",
+    "description": "Unusual high traffic detected on load-balancer",
+    "metrics": {
+      "connections": 558,
+      "cpu_usage": 97,
+      "response_time": 886,
+      "throughput": "24 GB/hour"
+    },
+    "timestamp": "2025-12-27T20:01:53.673544",
+    "cycle": 19
+  },
+  {
+    "type": "high_traffic",
+    "service": "auth-service",
+    "severity": "high",
+    "description": "Unusual high traffic detected on auth-service",
+    "metrics": {
+      "connections": 608,
+      "cpu_usage": 93,
+      "response_time": 1773,
+      "throughput": "58 GB/hour"
+    },
+    "timestamp": "2025-12-27T20:01:53.688798",
+    "cycle": 22
+  },
+  {
+    "type": "service_crash",
+    "service": "database-primary",
+    "severity": "critical",
+    "description": "database-primary has crashed and is not responding",
+    "metrics": {
+      "status": "down",
+      "error_code": "503",
+      "uptime_before_crash": "20 hours",
+      "last_signal": "SIGSEGV"
+    },
+    "timestamp": "2025-12-27T20:01:53.688798",
+    "cycle": 26
+  },
+  {
+    "type": "unauthorized_access",
+    "service": "web-server-1",
+    "severity": "critical",
+    "description": "Multiple failed login attempts detected on web-server-1",
+    "metrics": {
+      "failed_attempts": 69,
+      "source_ip": "192.168.1.243",
+      "user_account": "root",
+      "geolocation": "RU"
+    },
+    "timestamp": "2025-12-27T20:01:53.688798",
+    "cycle": 31
+  },
+  {
+    "type": "memory_leak",
+    "service": "auth-service",
+    "severity": "medium",
+    "description": "Memory usage steadily increasing on auth-service",
+    "metrics": {
+      "memory_usage": 91,
+      "leak_rate": "2MB/minute",
+      "heap_usage": 84
+    },
+    "timestamp": "2025-12-27T20:01:53.692263",
+    "cycle": 39
+  }
+]

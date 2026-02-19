@@ -1,0 +1,35 @@
+======================================================================
+SENTINEL-X PRIME - DECISION AGENT REPORT
+======================================================================
+
+Report Generated: 2025-12-28 22:44:28
+Total Decisions Made: 12
+
+DECISION BREAKDOWN:
+  ✅ Auto-heal decisions: 12 (100.0%)
+  🔄 Human escalation: 0 (0.0%)
+  👀 Monitor only: 0 (0.0%)
+
+AUTO-HEAL EFFICIENCY:
+  Average confidence for auto-heal: 77.4%
+  Threshold used: 70%
+
+RECENT DECISIONS:
+
+• Service Crash on database-primary
+  Decision: Auto Heal
+  Confidence: 80%
+  Action: Restart Service
+  Risk: CRITICAL
+
+• Unauthorized Access on web-server-1
+  Decision: Auto Heal
+  Confidence: 85%
+  Action: Block Ip
+  Risk: CRITICAL
+
+• Memory Leak on auth-service
+  Decision: Auto Heal
+  Confidence: 67%
+  Action: Restart Service
+  Risk: HIGH
