@@ -1,0 +1,9 @@
+[
+  {
+    "incident_id": "INC-001",
+    "type": "CPU Spike",
+    "anomaly_score": 0.92,
+    "timestamp": "2026-02-09 14:10:00",
+    "status": "Detected"
+  }
+]

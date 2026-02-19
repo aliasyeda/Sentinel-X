@@ -1,0 +1,9 @@
+[
+  {
+    "incident_id": "INC-001",
+    "action": "Service Restart",
+    "status": "Success",
+    "time_taken": "4 seconds",
+    "result": "System Restored"
+  }
+]

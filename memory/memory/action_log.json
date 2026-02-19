@@ -1,0 +1,14 @@
+[
+  {
+    "action_id": "ACT-1771512447",
+    "action_type": "ISOLATE_HOST",
+    "service": "auth-service",
+    "status": "success",
+    "estimated_duration": "0.5s",
+    "risk_level": "medium",
+    "timestamp": "2026-02-19T20:17:27.868819",
+    "action_details": {
+      "method": "Network ACL Update"
+    }
+  }
+]

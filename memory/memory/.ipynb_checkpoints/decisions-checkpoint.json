@@ -1,0 +1,1514 @@
+[
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "database_connection_failure",
+      "service": "auth-service",
+      "severity": "high",
+      "description": "auth-service unable to connect to database",
+      "metrics": {
+        "connection_pool": 0,
+        "queue_size": 153,
+        "error": "Connection timeout",
+        "retry_count": 5
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 1
+    },
+    "analysis": {
+      "type": "database_connection_failure",
+      "raw_type": "database_connection_failure",
+      "category": "infrastructure",
+      "priority": 1,
+      "service": "auth-service",
+      "service_importance": 9,
+      "severity": "high",
+      "impact_score": 8.82,
+      "human_summary": "[CONNECTION] Connection Failure: Database connectivity lost for auth-service.",
+      "key_metrics": {
+        "connection_pool": 0,
+        "queue_size": 153,
+        "error": "Connection timeout",
+        "retry_count": 5
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 1
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[HIGH PRIORITY] Address within 15 minutes",
+        "Check database server status",
+        "Verify network connectivity to database",
+        "Review database connection pool settings",
+        "Check for database locks or deadlocks"
+      ],
+      "investigation_areas": [
+        "Database server",
+        "Network",
+        "Credentials",
+        "Connection pooling"
+      ],
+      "estimated_time_to_resolve": "15-45 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: Database connection failure on auth-service indicates network or authentication issues. Check database server and network connectivity. Confidence: 83%",
+      "reasoning_summary": "Analysis: Database connection failure on auth-service indicates network or authentication issues. Ch...",
+      "confidence_score": 0.83,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "Network issue",
+        "Authentication failure",
+        "Database server overload"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-auth-service",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.623787",
+      "input_analysis": {
+        "type": "database_connection_failure",
+        "service": "auth-service",
+        "severity": "high",
+        "impact_score": 8.82,
+        "ai_confidence": 0.83,
+        "ai_summary": "Analysis: Database connection failure on auth-service indicates network or authentication issues. Ch"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (83% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 83% meets auto-heal threshold. Action: Restart Service. Risk: CRITICAL. Estimated recovery: 2-5 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "restart_service",
+        "details": {
+          "method": "graceful_restart",
+          "drain_connections": true,
+          "preserve_state": false,
+          "timeout_seconds": 30,
+          "confidence_based_adjustment": "aggressive_recovery"
+        },
+        "estimated_recovery_time": "2-5 minutes",
+        "risk_level": "critical",
+        "risk_explanation": "Auto-restart of auth-service - low data loss risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": false,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "service_crash",
+      "service": "load-balancer",
+      "severity": "critical",
+      "description": "load-balancer has crashed and is not responding",
+      "metrics": {
+        "status": "down",
+        "error_code": "404",
+        "uptime_before_crash": "60 hours",
+        "last_signal": "SIGTERM"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 2
+    },
+    "analysis": {
+      "type": "service_crash",
+      "raw_type": "service_crash",
+      "category": "availability",
+      "priority": 1,
+      "service": "load-balancer",
+      "service_importance": 8,
+      "severity": "critical",
+      "impact_score": 10.4,
+      "human_summary": "[EMERGENCY] Emergency: load-balancer is DOWN requiring immediate intervention.",
+      "key_metrics": {
+        "status": "DOWN",
+        "error_code": "404",
+        "uptime_before_crash": "60 hours",
+        "recovery_action": "Restart required"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 2
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[URGENT] Requires immediate human intervention",
+        "[IMMEDIATE] Restart load-balancer",
+        "Check logs for error: load-balancer",
+        "Verify dependencies of load-balancer are running",
+        "Monitor restart process of load-balancer"
+      ],
+      "investigation_areas": [
+        "Application logs",
+        "System resources",
+        "Dependencies",
+        "Recent changes"
+      ],
+      "estimated_time_to_resolve": "5 minutes (URGENT)"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: load-balancer crash likely due to resource exhaustion or software bug. Review logs and recent deployments. Confidence: 80%",
+      "reasoning_summary": "Analysis: load-balancer crash likely due to resource exhaustion or software bug. Review logs and rec...",
+      "confidence_score": 0.8,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "Resource exhaustion",
+        "Software bug",
+        "Dependency failure"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-load-balancer",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "service_crash",
+        "service": "load-balancer",
+        "severity": "critical",
+        "impact_score": 10.4,
+        "ai_confidence": 0.8,
+        "ai_summary": "Analysis: load-balancer crash likely due to resource exhaustion or software bug. Review logs and rec"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (80% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 80% meets auto-heal threshold. Action: Restart Service. Risk: HIGH. Estimated recovery: 2 minutes (URGENT).",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "restart_service",
+        "details": {
+          "method": "graceful_restart",
+          "drain_connections": true,
+          "preserve_state": false,
+          "timeout_seconds": 30,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "2 minutes (URGENT)",
+        "risk_level": "high",
+        "risk_explanation": "Auto-restart of load-balancer - low data loss risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "high_traffic",
+      "service": "cache-redis",
+      "severity": "high",
+      "description": "Unusual high traffic detected on cache-redis",
+      "metrics": {
+        "connections": 443,
+        "cpu_usage": 80,
+        "response_time": 967,
+        "throughput": "79 GB/hour"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 6
+    },
+    "analysis": {
+      "type": "high_traffic",
+      "raw_type": "high_traffic",
+      "category": "performance",
+      "priority": 2,
+      "service": "cache-redis",
+      "service_importance": 6,
+      "severity": "high",
+      "impact_score": 4.62,
+      "human_summary": "[TRAFFIC] Traffic Spike: cache-redis showing 443 connections with 80% CPU usage.",
+      "key_metrics": {
+        "connections": 443,
+        "cpu_usage": "80%",
+        "response_time": "967ms",
+        "status": "Warning"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 6
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[HIGH PRIORITY] Address within 15 minutes",
+        "Monitor cache-redis CPU and memory closely",
+        "Consider scaling cache-redis horizontally",
+        "Check if this is a legitimate traffic surge or DDoS",
+        "[IMMEDIATE] Implement rate limiting on cache-redis"
+      ],
+      "investigation_areas": [
+        "Network traffic",
+        "User behavior",
+        "DDoS protection",
+        "Auto-scaling config"
+      ],
+      "estimated_time_to_resolve": "10-30 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: High traffic on cache-redis indicates potential DDoS attack or legitimate traffic surge. Check traffic sources and consider scaling. Confidence: 73%",
+      "reasoning_summary": "Analysis: High traffic on cache-redis indicates potential DDoS attack or legitimate traffic surge. C...",
+      "confidence_score": 0.73,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "DDoS attack",
+        "Legitimate traffic surge",
+        "Misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-cache-redis",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "high_traffic",
+        "service": "cache-redis",
+        "severity": "high",
+        "impact_score": 4.62,
+        "ai_confidence": 0.73,
+        "ai_summary": "Analysis: High traffic on cache-redis indicates potential DDoS attack or legitimate traffic surge. C"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (73% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 73% meets auto-heal threshold. Action: Scale Up. Risk: MEDIUM. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "medium",
+        "risk_explanation": "Automated recovery - medium risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "unauthorized_access",
+      "service": "web-server-1",
+      "severity": "critical",
+      "description": "Multiple failed login attempts detected on web-server-1",
+      "metrics": {
+        "failed_attempts": 74,
+        "source_ip": "192.168.1.234",
+        "user_account": "admin",
+        "geolocation": "RU"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 7
+    },
+    "analysis": {
+      "type": "unauthorized_access",
+      "raw_type": "unauthorized_access",
+      "category": "security",
+      "priority": 0,
+      "service": "web-server-1",
+      "service_importance": 7,
+      "severity": "critical",
+      "impact_score": 10.5,
+      "human_summary": "[BREACH] Breach Attempt: Potential security breach in progress on web-server-1.",
+      "key_metrics": {
+        "attempts": 74,
+        "source_ip": "192.168.1.234",
+        "user_targeted": "admin",
+        "risk_level": "HIGH"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 7
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[URGENT] Requires immediate human intervention",
+        "[IMMEDIATE] Block IP in firewall",
+        "Review authentication logs for web-server-1",
+        "Check for compromised accounts on web-server-1",
+        "Enable MFA if not already enabled",
+        "[CONSIDER] Temporarily isolate web-server-1"
+      ],
+      "investigation_areas": [
+        "Access logs",
+        "Firewall rules",
+        "User accounts",
+        "Network ingress"
+      ],
+      "estimated_time_to_resolve": "15 minutes (URGENT)"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authentication logs and firewall rules. Confidence: 82%",
+      "reasoning_summary": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authe...",
+      "confidence_score": 0.82,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "Credential stuffing",
+        "Brute force attack",
+        "Security misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-web-server-1",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "unauthorized_access",
+        "service": "web-server-1",
+        "severity": "critical",
+        "impact_score": 10.5,
+        "ai_confidence": 0.82,
+        "ai_summary": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authe"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (82% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 82% meets auto-heal threshold. Action: Block Ip. Risk: CRITICAL. Estimated recovery: 1 minutes (URGENT).",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "block_ip",
+        "details": {
+          "method": "standard_procedure",
+          "confidence_based_adjustment": "aggressive_recovery"
+        },
+        "estimated_recovery_time": "1 minutes (URGENT)",
+        "risk_level": "critical",
+        "risk_explanation": "Automated recovery - critical risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": false,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "high_traffic",
+      "service": "web-server-1",
+      "severity": "high",
+      "description": "Unusual high traffic detected on web-server-1",
+      "metrics": {
+        "connections": 110,
+        "cpu_usage": 84,
+        "response_time": 1564,
+        "throughput": "24 GB/hour"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 8
+    },
+    "analysis": {
+      "type": "high_traffic",
+      "raw_type": "high_traffic",
+      "category": "performance",
+      "priority": 2,
+      "service": "web-server-1",
+      "service_importance": 7,
+      "severity": "high",
+      "impact_score": 5.39,
+      "human_summary": "[TRAFFIC] Traffic Spike: web-server-1 showing 110 connections with 84% CPU usage.",
+      "key_metrics": {
+        "connections": 110,
+        "cpu_usage": "84%",
+        "response_time": "1564ms",
+        "status": "Overloaded"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 8
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[HIGH PRIORITY] Address within 15 minutes",
+        "Monitor web-server-1 CPU and memory closely",
+        "Consider scaling web-server-1 horizontally",
+        "Check if this is a legitimate traffic surge or DDoS",
+        "[IMMEDIATE] Implement rate limiting on web-server-1"
+      ],
+      "investigation_areas": [
+        "Network traffic",
+        "User behavior",
+        "DDoS protection",
+        "Auto-scaling config"
+      ],
+      "estimated_time_to_resolve": "10-30 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: High traffic on web-server-1 indicates potential DDoS attack or legitimate traffic surge. Check traffic sources and consider scaling. Confidence: 79%",
+      "reasoning_summary": "Analysis: High traffic on web-server-1 indicates potential DDoS attack or legitimate traffic surge. ...",
+      "confidence_score": 0.79,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "DDoS attack",
+        "Legitimate traffic surge",
+        "Misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-web-server-1",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "high_traffic",
+        "service": "web-server-1",
+        "severity": "high",
+        "impact_score": 5.39,
+        "ai_confidence": 0.79,
+        "ai_summary": "Analysis: High traffic on web-server-1 indicates potential DDoS attack or legitimate traffic surge. "
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (79% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 79% meets auto-heal threshold. Action: Scale Up. Risk: MEDIUM. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "medium",
+        "risk_explanation": "Automated recovery - medium risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "high_traffic",
+      "service": "load-balancer",
+      "severity": "medium",
+      "description": "Unusual high traffic detected on load-balancer",
+      "metrics": {
+        "connections": 335,
+        "cpu_usage": 87,
+        "response_time": 1915,
+        "throughput": "17 GB/hour"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 11
+    },
+    "analysis": {
+      "type": "high_traffic",
+      "raw_type": "high_traffic",
+      "category": "performance",
+      "priority": 2,
+      "service": "load-balancer",
+      "service_importance": 8,
+      "severity": "medium",
+      "impact_score": 3.52,
+      "human_summary": "[TRAFFIC] Traffic Spike: load-balancer showing 335 connections with 87% CPU usage.",
+      "key_metrics": {
+        "connections": 335,
+        "cpu_usage": "87%",
+        "response_time": "1915ms",
+        "status": "Overloaded"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 11
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "Monitor load-balancer CPU and memory closely",
+        "Consider scaling load-balancer horizontally",
+        "Check if this is a legitimate traffic surge or DDoS"
+      ],
+      "investigation_areas": [
+        "Network traffic",
+        "User behavior",
+        "DDoS protection",
+        "Auto-scaling config"
+      ],
+      "estimated_time_to_resolve": "10-30 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": false
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge. Check traffic sources and consider scaling. Confidence: 77%",
+      "reasoning_summary": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge....",
+      "confidence_score": 0.77,
+      "investigation_priority": "MEDIUM",
+      "root_cause_hypotheses": [
+        "DDoS attack",
+        "Legitimate traffic surge",
+        "Misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": false,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-load-balancer",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "high_traffic",
+        "service": "load-balancer",
+        "severity": "medium",
+        "impact_score": 3.52,
+        "ai_confidence": 0.77,
+        "ai_summary": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge."
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (77% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 77% meets auto-heal threshold. Action: Scale Up. Risk: MEDIUM. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "medium",
+        "risk_explanation": "Automated recovery - medium risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "slow_response",
+      "service": "load-balancer",
+      "severity": "low",
+      "description": "load-balancer responding slowly to requests",
+      "metrics": {
+        "avg_response_time": 1092,
+        "timeout_percentage": 21,
+        "p95_latency": 3690
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 17
+    },
+    "analysis": {
+      "type": "slow_response",
+      "raw_type": "slow_response",
+      "category": "performance",
+      "priority": 3,
+      "service": "load-balancer",
+      "service_importance": 8,
+      "severity": "low",
+      "impact_score": 0.8,
+      "human_summary": "[PERF] Performance Degradation: load-balancer responding slowly.",
+      "key_metrics": {
+        "avg_response_time": 1092,
+        "timeout_percentage": 21,
+        "p95_latency": 3690
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 17
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "Check database queries on load-balancer",
+        "Monitor external API dependencies",
+        "Review recent deployments to load-balancer",
+        "Check for resource contention"
+      ],
+      "investigation_areas": [
+        "Database performance",
+        "External APIs",
+        "Code efficiency",
+        "Infrastructure"
+      ],
+      "estimated_time_to_resolve": "30-120 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": false
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: slow_response on load-balancer requires investigation. Severity: low. Impact: 0.8/10. Confidence: 75%",
+      "reasoning_summary": "Analysis: slow_response on load-balancer requires investigation. Severity: low. Impact: 0.8/10. Conf...",
+      "confidence_score": 0.75,
+      "investigation_priority": "MEDIUM",
+      "root_cause_hypotheses": [
+        "Unknown cause"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": false,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-load-balancer",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "slow_response",
+        "service": "load-balancer",
+        "severity": "low",
+        "impact_score": 0.8,
+        "ai_confidence": 0.75,
+        "ai_summary": "Analysis: slow_response on load-balancer requires investigation. Severity: low. Impact: 0.8/10. Conf"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (75% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 75% meets auto-heal threshold. Action: Scale Up. Risk: LOW. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "low",
+        "risk_explanation": "Automated recovery - low risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "raw_incident": {
+      "type": "high_traffic",
+      "service": "load-balancer",
+      "severity": "medium",
+      "description": "Unusual high traffic detected on load-balancer",
+      "metrics": {
+        "connections": 558,
+        "cpu_usage": 97,
+        "response_time": 886,
+        "throughput": "24 GB/hour"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 19
+    },
+    "analysis": {
+      "type": "high_traffic",
+      "raw_type": "high_traffic",
+      "category": "performance",
+      "priority": 2,
+      "service": "load-balancer",
+      "service_importance": 8,
+      "severity": "medium",
+      "impact_score": 5.52,
+      "human_summary": "[TRAFFIC] Traffic Spike: load-balancer showing 558 connections with 97% CPU usage.",
+      "key_metrics": {
+        "connections": 558,
+        "cpu_usage": "97%",
+        "response_time": "886ms",
+        "status": "Overloaded"
+      },
+      "timestamp": "2025-12-27T20:01:53.673544",
+      "cycle": 19
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "Monitor load-balancer CPU and memory closely",
+        "Consider scaling load-balancer horizontally",
+        "Check if this is a legitimate traffic surge or DDoS"
+      ],
+      "investigation_areas": [
+        "Network traffic",
+        "User behavior",
+        "DDoS protection",
+        "Auto-scaling config"
+      ],
+      "estimated_time_to_resolve": "10-30 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": false
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "llm_analysis": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge. Check traffic sources and consider scaling. Confidence: 75%",
+      "reasoning_summary": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge....",
+      "confidence_score": 0.75,
+      "investigation_priority": "MEDIUM",
+      "root_cause_hypotheses": [
+        "DDoS attack",
+        "Legitimate traffic surge",
+        "Misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": false,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-load-balancer",
+      "incident_id": "2025-12-27T20-01-53-673544",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "high_traffic",
+        "service": "load-balancer",
+        "severity": "medium",
+        "impact_score": 5.52,
+        "ai_confidence": 0.75,
+        "ai_summary": "Analysis: High traffic on load-balancer indicates potential DDoS attack or legitimate traffic surge."
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (75% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 75% meets auto-heal threshold. Action: Scale Up. Risk: MEDIUM. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "medium",
+        "risk_explanation": "Automated recovery - medium risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "raw_incident": {
+      "type": "high_traffic",
+      "service": "auth-service",
+      "severity": "high",
+      "description": "Unusual high traffic detected on auth-service",
+      "metrics": {
+        "connections": 608,
+        "cpu_usage": 93,
+        "response_time": 1773,
+        "throughput": "58 GB/hour"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 22
+    },
+    "analysis": {
+      "type": "high_traffic",
+      "raw_type": "high_traffic",
+      "category": "performance",
+      "priority": 2,
+      "service": "auth-service",
+      "service_importance": 9,
+      "severity": "high",
+      "impact_score": 8.93,
+      "human_summary": "[TRAFFIC] Traffic Spike: auth-service showing 608 connections with 93% CPU usage.",
+      "key_metrics": {
+        "connections": 608,
+        "cpu_usage": "93%",
+        "response_time": "1773ms",
+        "status": "Overloaded"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 22
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[HIGH PRIORITY] Address within 15 minutes",
+        "Monitor auth-service CPU and memory closely",
+        "Consider scaling auth-service horizontally",
+        "Check if this is a legitimate traffic surge or DDoS",
+        "[IMMEDIATE] Implement rate limiting on auth-service"
+      ],
+      "investigation_areas": [
+        "Network traffic",
+        "User behavior",
+        "DDoS protection",
+        "Auto-scaling config"
+      ],
+      "estimated_time_to_resolve": "10-30 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "llm_analysis": "Analysis: High traffic on auth-service indicates potential DDoS attack or legitimate traffic surge. Check traffic sources and consider scaling. Confidence: 73%",
+      "reasoning_summary": "Analysis: High traffic on auth-service indicates potential DDoS attack or legitimate traffic surge. ...",
+      "confidence_score": 0.73,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "DDoS attack",
+        "Legitimate traffic surge",
+        "Misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-auth-service",
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "high_traffic",
+        "service": "auth-service",
+        "severity": "high",
+        "impact_score": 8.93,
+        "ai_confidence": 0.73,
+        "ai_summary": "Analysis: High traffic on auth-service indicates potential DDoS attack or legitimate traffic surge. "
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (73% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 73% meets auto-heal threshold. Action: Scale Up. Risk: HIGH. Estimated recovery: 3-7 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "scale_up",
+        "details": {
+          "scale_factor": 2,
+          "cooldown_period": 300,
+          "max_instances": 5,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "3-7 minutes",
+        "risk_level": "high",
+        "risk_explanation": "Automated recovery - high risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "raw_incident": {
+      "type": "service_crash",
+      "service": "database-primary",
+      "severity": "critical",
+      "description": "database-primary has crashed and is not responding",
+      "metrics": {
+        "status": "down",
+        "error_code": "503",
+        "uptime_before_crash": "20 hours",
+        "last_signal": "SIGSEGV"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 26
+    },
+    "analysis": {
+      "type": "service_crash",
+      "raw_type": "service_crash",
+      "category": "availability",
+      "priority": 1,
+      "service": "database-primary",
+      "service_importance": 10,
+      "severity": "critical",
+      "impact_score": 13.0,
+      "human_summary": "[EMERGENCY] Emergency: database-primary is DOWN requiring immediate intervention.",
+      "key_metrics": {
+        "status": "DOWN",
+        "error_code": "503",
+        "uptime_before_crash": "20 hours",
+        "recovery_action": "Restart required"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 26
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[URGENT] Requires immediate human intervention",
+        "[IMMEDIATE] Restart database-primary",
+        "Check logs for error: database-primary",
+        "Verify dependencies of database-primary are running",
+        "Monitor restart process of database-primary"
+      ],
+      "investigation_areas": [
+        "Application logs",
+        "System resources",
+        "Dependencies",
+        "Recent changes"
+      ],
+      "estimated_time_to_resolve": "5 minutes (URGENT)"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "llm_analysis": "Analysis: database-primary crash likely due to resource exhaustion or software bug. Review logs and recent deployments. Confidence: 80%",
+      "reasoning_summary": "Analysis: database-primary crash likely due to resource exhaustion or software bug. Review logs and ...",
+      "confidence_score": 0.8,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "Resource exhaustion",
+        "Software bug",
+        "Dependency failure"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-database-primary",
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "service_crash",
+        "service": "database-primary",
+        "severity": "critical",
+        "impact_score": 13.0,
+        "ai_confidence": 0.8,
+        "ai_summary": "Analysis: database-primary crash likely due to resource exhaustion or software bug. Review logs and "
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (80% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 80% meets auto-heal threshold. Action: Restart Service. Risk: CRITICAL. Estimated recovery: 2 minutes (URGENT).",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "restart_service",
+        "details": {
+          "method": "graceful_restart",
+          "drain_connections": true,
+          "preserve_state": false,
+          "timeout_seconds": 30,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "2 minutes (URGENT)",
+        "risk_level": "critical",
+        "risk_explanation": "Auto-restart of database-primary - low data loss risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": false,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "raw_incident": {
+      "type": "unauthorized_access",
+      "service": "web-server-1",
+      "severity": "critical",
+      "description": "Multiple failed login attempts detected on web-server-1",
+      "metrics": {
+        "failed_attempts": 69,
+        "source_ip": "192.168.1.243",
+        "user_account": "root",
+        "geolocation": "RU"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 31
+    },
+    "analysis": {
+      "type": "unauthorized_access",
+      "raw_type": "unauthorized_access",
+      "category": "security",
+      "priority": 0,
+      "service": "web-server-1",
+      "service_importance": 7,
+      "severity": "critical",
+      "impact_score": 10.5,
+      "human_summary": "[BREACH] Breach Attempt: Potential security breach in progress on web-server-1.",
+      "key_metrics": {
+        "attempts": 69,
+        "source_ip": "192.168.1.243",
+        "user_targeted": "root",
+        "risk_level": "HIGH"
+      },
+      "timestamp": "2025-12-27T20:01:53.688798",
+      "cycle": 31
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "[URGENT] Requires immediate human intervention",
+        "[IMMEDIATE] Block IP in firewall",
+        "Review authentication logs for web-server-1",
+        "Check for compromised accounts on web-server-1",
+        "Enable MFA if not already enabled",
+        "[CONSIDER] Temporarily isolate web-server-1"
+      ],
+      "investigation_areas": [
+        "Access logs",
+        "Firewall rules",
+        "User accounts",
+        "Network ingress"
+      ],
+      "estimated_time_to_resolve": "15 minutes (URGENT)"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": true
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "llm_analysis": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authentication logs and firewall rules. Confidence: 85%",
+      "reasoning_summary": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authe...",
+      "confidence_score": 0.85,
+      "investigation_priority": "HIGH",
+      "root_cause_hypotheses": [
+        "Credential stuffing",
+        "Brute force attack",
+        "Security misconfiguration"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": true,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-web-server-1",
+      "incident_id": "2025-12-27T20-01-53-688798",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "unauthorized_access",
+        "service": "web-server-1",
+        "severity": "critical",
+        "impact_score": 10.5,
+        "ai_confidence": 0.85,
+        "ai_summary": "Analysis: Unauthorized access attempts on web-server-1 suggest security breach attempt. Review authe"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "High AI confidence (85% \u2265 70%)",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 85% meets auto-heal threshold. Action: Block Ip. Risk: CRITICAL. Estimated recovery: 1 minutes (URGENT).",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "block_ip",
+        "details": {
+          "method": "standard_procedure",
+          "confidence_based_adjustment": "aggressive_recovery"
+        },
+        "estimated_recovery_time": "1 minutes (URGENT)",
+        "risk_level": "critical",
+        "risk_explanation": "Automated recovery - critical risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": false,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  },
+  {
+    "incident_id": "2025-12-27T20-01-53-692263",
+    "raw_incident": {
+      "type": "memory_leak",
+      "service": "auth-service",
+      "severity": "medium",
+      "description": "Memory usage steadily increasing on auth-service",
+      "metrics": {
+        "memory_usage": 91,
+        "leak_rate": "2MB/minute",
+        "heap_usage": 84
+      },
+      "timestamp": "2025-12-27T20:01:53.692263",
+      "cycle": 39
+    },
+    "analysis": {
+      "type": "memory_leak",
+      "raw_type": "memory_leak",
+      "category": "resource",
+      "priority": 2,
+      "service": "auth-service",
+      "service_importance": 9,
+      "severity": "medium",
+      "impact_score": 4.32,
+      "human_summary": "[MEMORY] Memory Growth: auth-service memory increasing at 2MB/minute.",
+      "key_metrics": {
+        "memory_usage": 91,
+        "leak_rate": "2MB/minute",
+        "heap_usage": 84
+      },
+      "timestamp": "2025-12-27T20:01:53.692263",
+      "cycle": 39
+    },
+    "recommendations": {
+      "immediate_actions": [
+        "Monitor memory usage trend on auth-service",
+        "Check for recent code changes to auth-service",
+        "Consider restarting auth-service during low traffic",
+        "Profile memory allocation in auth-service"
+      ],
+      "investigation_areas": [
+        "Code profiling",
+        "Library versions",
+        "Resource management",
+        "Monitoring gaps"
+      ],
+      "estimated_time_to_resolve": "60-240 minutes"
+    },
+    "perception_metadata": {
+      "analyzed_at": "2025-12-27T22:19:13.601668",
+      "confidence": 0.85,
+      "requires_human_review": false
+    },
+    "reasoning": {
+      "incident_id": "2025-12-27T20-01-53-692263",
+      "llm_analysis": "Analysis: memory_leak on auth-service requires investigation. Severity: medium. Impact: 4.32/10. Confidence: 67%",
+      "reasoning_summary": "Analysis: memory_leak on auth-service requires investigation. Severity: medium. Impact: 4.32/10. Con...",
+      "confidence_score": 0.67,
+      "investigation_priority": "MEDIUM",
+      "root_cause_hypotheses": [
+        "Unknown cause"
+      ],
+      "related_patterns": [],
+      "requires_expert_review": false,
+      "recommended_next_steps": [
+        "Check service logs",
+        "Review recent changes",
+        "Monitor system metrics"
+      ],
+      "metadata": {
+        "analyzed_at": "2025-12-28T03:10:19.299922",
+        "llm_provider": "gemini",
+        "llm_model": "gemini-2.0-flash-exp",
+        "reasoning_time": "03:10:19"
+      }
+    },
+    "decision": {
+      "decision_id": "DEC-20251228-224428-auth-service",
+      "incident_id": "2025-12-27T20-01-53-692263",
+      "timestamp": "2025-12-28T22:44:28.626785",
+      "input_analysis": {
+        "type": "memory_leak",
+        "service": "auth-service",
+        "severity": "medium",
+        "impact_score": 4.32,
+        "ai_confidence": 0.67,
+        "ai_summary": "Analysis: memory_leak on auth-service requires investigation. Severity: medium. Impact: 4.32/10. Con"
+      },
+      "decision": {
+        "type": "auto_heal",
+        "reason": "Moderate confidence (67%) with low severity",
+        "confidence_threshold_used": 0.7,
+        "explanation": "\u2705 AUTO-HEAL APPROVED: AI confidence 67% meets auto-heal threshold. Action: Restart Service. Risk: HIGH. Estimated recovery: 2-5 minutes.",
+        "requires_human_approval": false
+      },
+      "action": {
+        "type": "restart_service",
+        "details": {
+          "method": "graceful_restart",
+          "drain_connections": true,
+          "preserve_state": false,
+          "timeout_seconds": 30,
+          "confidence_based_adjustment": "standard_recovery"
+        },
+        "estimated_recovery_time": "2-5 minutes",
+        "risk_level": "high",
+        "risk_explanation": "Auto-restart of auth-service - low data loss risk",
+        "can_be_automated": true
+      },
+      "verification": {
+        "double_check_performed": true,
+        "safety_checks_passed": true,
+        "backup_plan_available": true,
+        "rollback_possible": true
+      },
+      "metadata": {
+        "decision_agent_version": "1.0",
+        "decision_logic": "confidence_based_autonomy",
+        "decision_time": "22:44:28",
+        "audit_trail_created": true
+      }
+    }
+  }
+]

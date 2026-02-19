@@ -1,0 +1,32 @@
+{
+  "decisions": [
+    {
+      "decision_id": "DEC-1771512443",
+      "timestamp": "2026-02-19T20:17:23.866966",
+      "confidence": 99,
+      "trigger": "SQL Injection Pattern",
+      "decision": {
+        "type": "ISOLATE_HOST",
+        "explainability_trace": {
+          "decision_process": [
+            {
+              "step": "Detection",
+              "evaluation": "Confirmed SQLi signature."
+            },
+            {
+              "step": "Policy",
+              "evaluation": "Auto-Defense Active."
+            },
+            {
+              "step": "Action",
+              "action": "ISOLATE_HOST"
+            }
+          ]
+        }
+      },
+      "reasoning": {
+        "llm_analysis": "Attack vector confirms known CVE-2024-xyz. Host isolation required immediately to prevent database dump."
+      }
+    }
+  ]
+}

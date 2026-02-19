@@ -1,0 +1,51 @@
+======================================================================
+SENTINEL-X PRIME - ENHANCED DECISION AGENT REPORT
+======================================================================
+
+Report Generated: 2025-12-29 22:35:36
+Operating Mode: SAFETY MODE with human gate
+Total Decisions Made: 12
+
+DECISION BREAKDOWN:
+  ✅ Auto-heal decisions: 0 (0.0%)
+  🔄 Human escalation: 12 (100.0%)
+  👀 Monitor only: 0 (0.0%)
+
+SAFETY GATE STATISTICS:
+  Safety checks passed: 0/12 (0.0%)
+
+CONFIDENCE ANALYSIS:
+
+ENHANCED FEATURES SUMMARY:
+  • Explainable AI Traces: 12 created
+  • Pattern Recognition: Used in 0 decisions
+  • Human-in-the-Loop: Active (Safety Mode)
+
+RECENT DECISIONS WITH EXPLANATIONS:
+
+──────────────────────────────────────────────────
+• Service Crash on database-primary
+  Decision: Escalate Human
+  Confidence: 95%
+  Pattern: Seen 1 times before
+  Action: Manual Intervention
+  Risk: CRITICAL
+  Safety Checks: FAILED
+
+──────────────────────────────────────────────────
+• Unauthorized Access on web-server-1
+  Decision: Escalate Human
+  Confidence: 95%
+  Pattern: Seen 3 times before
+  Action: Manual Intervention
+  Risk: CRITICAL
+  Safety Checks: FAILED
+
+──────────────────────────────────────────────────
+• Memory Leak on auth-service
+  Decision: Escalate Human
+  Confidence: 87%
+  Pattern: Seen 1 times before
+  Action: Manual Intervention
+  Risk: HIGH
+  Safety Checks: FAILED

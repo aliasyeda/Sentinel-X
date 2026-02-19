@@ -1,0 +1,16 @@
+[
+  {
+    "type": "high_traffic",
+    "service": "database-primary",
+    "severity": "high",
+    "description": "Unusual high traffic detected on database-primary",
+    "metrics": {
+      "connections": 255,
+      "cpu_usage": 85,
+      "response_time": 1572,
+      "throughput": "61 GB/hour"
+    },
+    "timestamp": "2026-02-19T20:11:41.081964",
+    "cycle": 1
+  }
+]

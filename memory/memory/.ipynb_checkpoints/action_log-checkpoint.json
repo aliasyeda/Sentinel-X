@@ -1,0 +1,206 @@
+[
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-auth-service",
+    "action_type": "restart_service",
+    "service": "auth-service",
+    "action_details": {
+      "method": "graceful_restart",
+      "drain_connections": true,
+      "preserve_state": false,
+      "timeout_seconds": 30,
+      "confidence_based_adjustment": "aggressive_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "2-5 minutes",
+    "risk_level": "critical"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-load-balancer",
+    "action_type": "restart_service",
+    "service": "load-balancer",
+    "action_details": {
+      "method": "graceful_restart",
+      "drain_connections": true,
+      "preserve_state": false,
+      "timeout_seconds": 30,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "2 minutes (URGENT)",
+    "risk_level": "high"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-cache-redis",
+    "action_type": "scale_up",
+    "service": "cache-redis",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "medium"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-web-server-1",
+    "action_type": "block_ip",
+    "service": "web-server-1",
+    "action_details": {
+      "method": "standard_procedure",
+      "confidence_based_adjustment": "aggressive_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "1 minutes (URGENT)",
+    "risk_level": "critical"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-web-server-1",
+    "action_type": "scale_up",
+    "service": "web-server-1",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "medium"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-load-balancer",
+    "action_type": "scale_up",
+    "service": "load-balancer",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "medium"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-load-balancer",
+    "action_type": "scale_up",
+    "service": "load-balancer",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "low"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-673544",
+    "decision_id": "DEC-20251228-224428-load-balancer",
+    "action_type": "scale_up",
+    "service": "load-balancer",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "medium"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "decision_id": "DEC-20251228-224428-auth-service",
+    "action_type": "scale_up",
+    "service": "auth-service",
+    "action_details": {
+      "scale_factor": 2,
+      "cooldown_period": 300,
+      "max_instances": 5,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "3-7 minutes",
+    "risk_level": "high"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "decision_id": "DEC-20251228-224428-database-primary",
+    "action_type": "restart_service",
+    "service": "database-primary",
+    "action_details": {
+      "method": "graceful_restart",
+      "drain_connections": true,
+      "preserve_state": false,
+      "timeout_seconds": 30,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "2 minutes (URGENT)",
+    "risk_level": "critical"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-688798",
+    "decision_id": "DEC-20251228-224428-web-server-1",
+    "action_type": "block_ip",
+    "service": "web-server-1",
+    "action_details": {
+      "method": "standard_procedure",
+      "confidence_based_adjustment": "aggressive_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "1 minutes (URGENT)",
+    "risk_level": "critical"
+  },
+  {
+    "action_id": "ACT-224428",
+    "incident_id": "2025-12-27T20-01-53-692263",
+    "decision_id": "DEC-20251228-224428-auth-service",
+    "action_type": "restart_service",
+    "service": "auth-service",
+    "action_details": {
+      "method": "graceful_restart",
+      "drain_connections": true,
+      "preserve_state": false,
+      "timeout_seconds": 30,
+      "confidence_based_adjustment": "standard_recovery"
+    },
+    "scheduled_time": "2025-12-28T22:44:28.626785",
+    "status": "pending_execution",
+    "estimated_duration": "2-5 minutes",
+    "risk_level": "high"
+  }
+]

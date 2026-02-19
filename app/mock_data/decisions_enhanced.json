@@ -1,0 +1,9 @@
+[
+  {
+    "incident_id": "INC-001",
+    "decision": "Restart Service",
+    "confidence": 0.88,
+    "reasoning": "CPU usage exceeded baseline threshold indicating abnormal behavior",
+    "autonomy_level": "Autonomous"
+  }
+]
