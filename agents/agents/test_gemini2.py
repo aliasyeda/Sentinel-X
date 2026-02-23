@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.getenv("AIzaSyD-FbfN0UQk_sGUMyM5uQOO4xBUxCidFao")
+api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     print("❌ ERROR: No API key found in .env file!")
     print("📋 Check your .env file:")
