@@ -6,7 +6,7 @@ Sentinel-X - A Self-Healing Autonomous Cyber Infrastructure Driven by Data Algor
 - Syeda Alia Samia
 - Syed Ather Ali
 - Shaik Samiya Sultana
-
+## Executive Summary
 Sentinel-X is an advanced AI-driven system designed to manage modern infrastructure complexity. It transforms traditional passive monitoring into an intelligent, autonomous framework capable of real-time detection, reasoning, and remediation of system anomalies.
 ## Problem Statement
 Modern distributed systems generate massive volumes of data that exceed human processing capabilities. Traditional monitoring tools rely on static alerts, leading to alert fatigue, delayed incident response, and repeated system failures. Additionally, lack of transparency in automation creates trust issues in critical environments.
