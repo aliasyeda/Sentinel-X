@@ -113,23 +113,6 @@ SENTINEL-X significantly improves system reliability and efficiency:
 
 ---
 
-## 🎯 Use Cases
-- Cloud infrastructure monitoring  
-- DevOps & SRE automation  
-- Cybersecurity anomaly detection  
-- Incident response systems  
-- AI-driven IT operations (AIOps)  
-
----
-
-## 📌 Future Enhancements
-- 🔗 Integration with cloud platforms (AWS, Azure)  
-- 🤖 Advanced LLM-based reasoning agents  
-- 📊 Real-time dashboards with predictive analytics  
-- 🔐 Enhanced security & threat intelligence modules  
-
----
-
 ## 🏁 Conclusion
 SENTINEL-X represents a shift from **reactive monitoring → autonomous intelligence**.
 
