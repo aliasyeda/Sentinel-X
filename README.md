@@ -53,8 +53,7 @@ SENTINEL-X introduces a **multi-agent AI architecture** that brings intelligence
 - Executes targeted remediation actions  
 - Enables **self-healing infrastructure**  
 
-### ⚖️ Autonomy Governor
-- Enforces **Human-in-the-Loop control**  
+### ⚖️ Autonomy Governor 
 - Ensures safe and governed AI decisions  
 - Prevents unsafe or unauthorized automation  
 
@@ -97,8 +96,6 @@ SENTINEL-X significantly improves system reliability and efficiency:
 - 🧠 Eliminates alert fatigue  
 - 🔍 Improves system observability  
 - 🔒 Builds trust through explainable AI  
-
-👉 Engineers can focus on **innovation instead of firefighting**.
 
 ---
 
