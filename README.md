@@ -7,7 +7,7 @@
 ## 🌟 Overview
 **SENTINEL-X** is an advanced AI-powered platform designed to transform traditional system monitoring into an **intelligent, autonomous, and self-healing infrastructure**.
 
-Instead of relying on passive dashboards and reactive alerts, SENTINEL-X actively:
+ SENTINEL-X actively:
 - Detects anomalies  
 - Identifies root causes  
 - Explains system behavior  
