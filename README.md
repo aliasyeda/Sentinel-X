@@ -63,8 +63,7 @@ SENTINEL-X introduces a **multi-agent AI architecture** that brings intelligence
 - ✅ Autonomous anomaly detection & response  
 - ✅ Explainable AI with transparent decision flow  
 - ✅ Real-time Root Cause Analysis (RCA)  
-- ✅ Self-healing infrastructure capabilities  
-- ✅ Human-in-the-Loop safety control  
+- ✅ Self-healing infrastructure capabilities   
 - ✅ Persistent memory for audit & learning  
 
 ---
