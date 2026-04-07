@@ -118,7 +118,4 @@ SENTINEL-X represents a shift from **reactive monitoring → autonomous intellig
 
 By combining AI, automation, and explainability, it delivers a **scalable, secure, and future-ready infrastructure solution**.
 
----
 
-## ⚡ Tagline
-**"Sense. Think. Act."**
