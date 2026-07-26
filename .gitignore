@@ -1,0 +1,39 @@
+# Environment variables
+.env
+.env.*
+
+# Node.js dependencies
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+# Build output
+dist/
+Backend/dist/
+Frontend/dist/
+
+# Vercel
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

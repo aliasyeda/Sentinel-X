@@ -1,0 +1,57 @@
+[
+  {
+    "name": "web-server-1",
+    "type": "web",
+    "status": "healthy",
+    "cpu_usage": 23.0,
+    "memory_usage": 30.2,
+    "response_time": 40.9,
+    "connections": 11,
+    "uptime": "0:00:00",
+    "timestamp": "2026-02-22T00:08:45.515859"
+  },
+  {
+    "name": "database-primary",
+    "type": "database",
+    "status": "healthy",
+    "cpu_usage": 22.6,
+    "memory_usage": 32.4,
+    "response_time": 40.6,
+    "connections": 9,
+    "uptime": "0:00:00",
+    "timestamp": "2026-02-22T00:08:45.515865"
+  },
+  {
+    "name": "auth-service",
+    "type": "auth",
+    "status": "healthy",
+    "cpu_usage": 24.2,
+    "memory_usage": 31.5,
+    "response_time": 42.0,
+    "connections": 8,
+    "uptime": "0:00:00",
+    "timestamp": "2026-02-22T00:08:45.515868"
+  },
+  {
+    "name": "cache-redis",
+    "type": "cache",
+    "status": "healthy",
+    "cpu_usage": 22.3,
+    "memory_usage": 29.6,
+    "response_time": 46.5,
+    "connections": 11,
+    "uptime": "0:00:00",
+    "timestamp": "2026-02-22T00:08:45.515871"
+  },
+  {
+    "name": "load-balancer",
+    "type": "lb",
+    "status": "degraded",
+    "cpu_usage": 21.2,
+    "memory_usage": 30.7,
+    "response_time": 41.0,
+    "connections": 8,
+    "uptime": "0:00:00",
+    "timestamp": "2026-02-22T00:08:45.515874"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "type": "unauthorized_access",
+    "service": "load-balancer",
+    "severity": "high",
+    "description": "Multiple failed login attempts detected on load-balancer",
+    "metrics": {
+      "failed_attempts": 71,
+      "source_ip": "192.168.1.211",
+      "user_account": "admin",
+      "geolocation": "US"
+    },
+    "timestamp": "2026-02-22T00:08:45.513944",
+    "cycle": 1
+  }
+]
